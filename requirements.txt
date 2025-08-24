@@ -1,0 +1,8 @@
+fancy_einsum
+circuitsvis
+einops
+numpy
+plotly
+matplotlib
+transformer_lens
+jaxtyping
