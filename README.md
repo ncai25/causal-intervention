@@ -36,10 +36,10 @@ Take the example about the nurse and the farmer from earlier. The paired sentenc
 
 ## Results
 
-**Attention Intervention:** Heads in layers 4-5 show strongest effects (>0.02), with head 4.3 and 5.7 contributing most to gender bias propagation.
+**Attention Intervention:** Heads in layers 4-6 show strongest indirect effects, with head 5.8 and 5.11 contributing most to gender bias results.
 
 ![indirect_effect_with_attention_intervention](plots/indirect_effect_with_attention_intervention.png)
 
-**Indirect Effect by Layer:** Layer 4 shows peak indirect effect (~0.08), with layers 3 and 5 also elevated (~0.06), while early (0-2) and late layers (7-11) remain near zero.
+**Indirect Effect by Layer:** Layer 5 shows peak indirect effect (~0.386), with layers 4 (~0.084)and 6 (~0.077) also high, while early (0-3) and late layers (8-11) don't contribute as much.
 
 ![indirect_effect_sum_by_layer](plots/indirect_effect_sum_by_layer.png)
