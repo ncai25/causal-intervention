@@ -12,14 +12,15 @@ Consider this sentence from the Winobias dataset:
 
 Does _she_ refer to the nurse or the farmer in this sentence? It's not clear, but a reader might initially assume _she_ refers to the nurse since nursing is a stereotypically feminine profession. Now consider two different ways to complete the sentence:
 
-> **Stereotypical candidate:** was caring 
+> **Stereotypical candidate:** was caring
+
 > **Anti-stereotypical candidate:** was screaming
 
-In the stereotypical reading, I assume _she_ refers to the nurse, implying the continuation _was caring_. In the anti-stereotypical reading, I instead assume that _she_ refers to the farmer, implying the continuation _was screaming_.
+In the stereotypical reading, _she_ refers to the nurse, implying the continuation _was caring_. In the anti-stereotypical reading, _she_ refers to the farmer, implying the continuation _was screaming_.
 
 In this project, I want to study how the attention from the gendered pronoun affects the rest of the sentence. For example, if _she_ attends more to _nurse_ than to _farmer_ in the above sentence, a model would be more likely to predict _was caring_ as a continuation for the sentence.
 
-**Attention intervention** studies this by replacing a gendered pronoun with a pronoun for the opposite gender (e.g. replacing _she_ with _he_ in this sentence). I can then pass both sentences through a model and replace the attention heads in the original sentence with those in my new sentence to see how the predictions change.
+**Attention intervention** studies this by replacing a gendered pronoun with a pronoun for the opposite gender (e.g. replacing _she_ with _he_). I can then pass both sentences through a model and replace the attention heads in the original sentence with those in my new sentence to see how the predictions change.
 
 Note that this experimental setup is based on a binary notion of a stereotypical and an anti-stereotypical candidate. Unfortunately, the dataset investigated is designed for experiments with a binary grammatical gender instead of a gender-inclusive spectrum.
 
@@ -31,6 +32,7 @@ I will use a subset of the [Winobias dataset](https://uclanlp.github.io/corefBia
 Take the example about the nurse and the farmer from earlier. The paired sentences in the Winobias dataset that correspond to this example are:
 
 > [The nurse] examined the farmer for injuries because [she] was caring. 
+
 > The nurse examined [the farmer] for injuries because [he] was screaming.
 
 
