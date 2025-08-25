@@ -15,20 +15,31 @@ Does _she_ refer to the nurse or the farmer in this sentence? It's not clear, bu
 > **Stereotypical candidate:** was caring 
 > **Anti-stereotypical candidate:** was screaming
 
-In the stereotypical reading, we assume _she_ refers to the nurse, implying the continuation _was caring_. In the anti-stereotypical reading, we instead assume that _she_ refers to the farmer, implying the continuation _was screaming_.
+In the stereotypical reading, I assume _she_ refers to the nurse, implying the continuation _was caring_. In the anti-stereotypical reading, I instead assume that _she_ refers to the farmer, implying the continuation _was screaming_.
 
-In this project, we want to study how the attention from the gendered pronoun affects the rest of the sentence. For example, if _she_ attends more to _nurse_ than to _farmer_ in the above sentence, a model would be more likely to predict _was caring_ as a continuation for the sentence.
+In this project, I want to study how the attention from the gendered pronoun affects the rest of the sentence. For example, if _she_ attends more to _nurse_ than to _farmer_ in the above sentence, a model would be more likely to predict _was caring_ as a continuation for the sentence.
 
-**Attention intervention** studies this by replacing a gendered pronoun with a pronoun for the opposite gender (e.g. replacing _she_ with _he_ in this sentence). We can then pass both sentences through a model and replace the attention heads in the original sentence with those in our new sentence to see how the predictions change.
+**Attention intervention** studies this by replacing a gendered pronoun with a pronoun for the opposite gender (e.g. replacing _she_ with _he_ in this sentence). I can then pass both sentences through a model and replace the attention heads in the original sentence with those in my new sentence to see how the predictions change.
 
 Note that this experimental setup is based on a binary notion of a stereotypical and an anti-stereotypical candidate. Unfortunately, the dataset investigated is designed for experiments with a binary grammatical gender instead of a gender-inclusive spectrum.
 
 
 ## Data
 
-We will use a subset of the [Winobias dataset](https://uclanlp.github.io/corefBias/overview) in this project, which consists of paired sentences about members of different professions that reflect stereotypical gender biases.
+I will use a subset of the [Winobias dataset](https://uclanlp.github.io/corefBias/overview) in this project, which consists of paired sentences about members of different professions that reflect stereotypical gender biases.
 
-Take our example about the nurse and the farmer from earlier. Our paired sentences in the Winobias dataset that correspond to this example are:
+Take the example about the nurse and the farmer from earlier. The paired sentences in the Winobias dataset that correspond to this example are:
 
 > [The nurse] examined the farmer for injuries because [she] was caring. 
 > The nurse examined [the farmer] for injuries because [he] was screaming.
+
+
+## Results
+
+**Attention Intervention:** Heads in layers 4-5 show strongest effects (>0.02), with head 4.3 and 5.7 contributing most to gender bias propagation.
+
+![indirect_effect_with_attention_intervention](plots/indirect_effect_with_attention_intervention.png)
+
+**Indirect Effect by Layer:** Layer 4 shows peak indirect effect (~0.08), with layers 3 and 5 also elevated (~0.06), while early (0-2) and late layers (7-11) remain near zero.
+
+![indirect_effect_sum_by_layer](plots/indirect_effect_sum_by_layer.png)
