@@ -1,12 +1,12 @@
 ## Resources
-This project is adapted from [Causal Mediation Analysis for Interpreting NLP: The Case of Gender Bias](https://arxiv.org/pdf/2004.12265.pdf) (Vig et al, 2020). 
+
+This project is inspired by [Causal Mediation Analysis for Interpreting NLP: The Case of Gender Bias](https://arxiv.org/pdf/2004.12265.pdf) (Vig et al, 2020).
 
 Source code for the paper can be found [here](https://github.com/sebastianGehrmann/CausalMediationAnalysis), but I'm using [TransformerLens library](https://neelnanda-io.github.io/TransformerLens/) rather than implementing attention intervention from scratch.
 
-
 ## Description
 
-Consider this sentence from the Winobias dataset: 
+Consider this sentence from the Winobias dataset:
 
 > **Prompt:** The nurse examined the farmer for injuries because she…
 
@@ -24,17 +24,15 @@ In this project, I want to study how the attention from the gendered pronoun aff
 
 Note that this experimental setup is based on a binary notion of a stereotypical and an anti-stereotypical candidate. Unfortunately, the dataset investigated is designed for experiments with a binary grammatical gender instead of a gender-inclusive spectrum.
 
-
 ## Data
 
 I will use a subset of the [Winobias dataset](https://uclanlp.github.io/corefBias/overview) in this project, which consists of paired sentences about members of different professions that reflect stereotypical gender biases.
 
 Take the example about the nurse and the farmer from earlier. The paired sentences in the Winobias dataset that correspond to this example are:
 
-> [The nurse] examined the farmer for injuries because [she] was caring. 
+> [The nurse] examined the farmer for injuries because [she] was caring.
 
 > The nurse examined [the farmer] for injuries because [he] was screaming.
-
 
 ## Results
 
