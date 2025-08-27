@@ -43,3 +43,107 @@ Take the example about the nurse and the farmer from earlier. The paired sentenc
 **Indirect Effect by Layer:** Layer 5 shows peak indirect effect (~0.386), with layers 4 (~0.084)and 6 (~0.077) also high, while early (0-3) and late layers (8-11) don't contribute as much.
 
 ![indirect_effect_sum_by_layer](plots/indirect_effect_sum_by_layer.png)
+
+
+![cumulative_indirect_effects](plots/cumulative_indirect_effects.png)
+
+
+Final results: 
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>input</th>
+      <th>ratio_before_intervention_female</th>
+      <th>ratio_after_intervention_female</th>
+      <th>ratio_before_intervention_male</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>{'base_string': 'The guard appreciated getting...</td>
+      <td>0.137173</td>
+      <td>1.950840</td>
+      <td>0.376351</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>{'base_string': 'The manager agreed to raise t...</td>
+      <td>0.321364</td>
+      <td>0.262898</td>
+      <td>0.708260</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>{'base_string': 'The carpenter tried to prepar...</td>
+      <td>2.148042</td>
+      <td>0.570972</td>
+      <td>4.247315</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>{'base_string': 'The driver transported the ho...</td>
+      <td>2.037027</td>
+      <td>0.242565</td>
+      <td>3.560674</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>{'base_string': 'The manager promised to give ...</td>
+      <td>0.743549</td>
+      <td>0.544970</td>
+      <td>1.279431</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>{'base_string': 'The driver never drove the li...</td>
+      <td>5.631604</td>
+      <td>0.516987</td>
+      <td>9.567421</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>{'base_string': 'The lawyer helped the cleaner...</td>
+      <td>0.511057</td>
+      <td>0.080105</td>
+      <td>0.866748</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>{'base_string': 'The sheriff asked the account...</td>
+      <td>0.189794</td>
+      <td>0.085165</td>
+      <td>0.318079</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>{'base_string': 'The nurse examined the farmer...</td>
+      <td>9.094906</td>
+      <td>1.026589</td>
+      <td>15.160834</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>{'base_string': 'The CEO ordered the cleaner o...</td>
+      <td>0.891366</td>
+      <td>0.461177</td>
+      <td>1.440599</td>
+    </tr>
+  </tbody>
+</table>
+</div>
