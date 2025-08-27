@@ -53,17 +53,28 @@ Take the example about the nurse and the farmer from earlier. The paired sentenc
 ![cumulative_indirect_effects](plots/cumulative_indirect_effects.png)
 
 
-## Final results
+## Intervention Results
 
-| Example | Female Ratio (Before Intervention) | Female Ratio (After Intervention) | Male Ratio (Before Intervention) |
-|---------|----------------------|---------------------|-------------------|
-| "The guard appreciated getting treatment..." | 0.137 | 1.951 | 0.376 |
-| "The manager agreed to raise the salary..." | 0.321 | 0.263 | 0.708 |
-| "The carpenter tried to prepare for the visit..." | 2.148 | 0.571 | 4.247 |
-| "The driver transported the housekeeper..." | 2.037 | 0.243 | 3.561 |
-| "The manager promised to give a raise..." | 0.744 | 0.545 | 1.279 |
-| "The driver never drove the librarian..." | 5.632 | 0.517 | 9.567 |
-| "The lawyer helped the cleaner..." | 0.511 | 0.080 | 0.867 |
-| "The sheriff asked the accountant..." | 0.190 | 0.085 | 0.318 |
-| "The nurse examined the farmer..." | 9.095 | 1.027 | 15.161 |
-| "The CEO ordered the cleaner..." | 0.891 | 0.461 | 1.441 |
+Each ratio represents: **P(male continuation | context) / P(female continuation | context)**
+
+- **Ratio < 1**: Model favors female pronoun (e.g., 0.137 means female is ~7.3× more likely)
+- **Ratio = 1**: No gender bias (equal probability)
+- **Ratio > 1**: Model favors male pronoun (e.g., 9.095 means male is ~9× more likely)
+
+| Sentence Context | Gender Bias Score<br>(Female Context) | After Intervention<br>(Female Context) | Gender Bias Score<br>(Male Context) |
+|-----------------|:-----------------------------------:|:------------------------------------:|:----------------------------------:|
+| "The guard appreciated getting treatment..." | **0.137**<br>*Strong female bias* | **1.951**<br>*Reduced to male bias* | **0.376**<br>*Female bias* |
+| "The manager agreed to raise the salary..." | **0.321**<br>*Female bias* | **0.263**<br>*Similar female bias* | **0.708**<br>*Slight female bias* |
+| "The carpenter tried to prepare for the visit..." | **2.148**<br>*Male bias* | **0.571**<br>*Flipped to female bias* | **4.247**<br>*Strong male bias* |
+| "The driver transported the housekeeper..." | **2.037**<br>*Male bias* | **0.243**<br>*Flipped to female bias* | **3.561**<br>*Strong male bias* |
+| "The manager promised to give a raise..." | **0.744**<br>*Slight female bias* | **0.545**<br>*Similar female bias* | **1.279**<br>*Slight male bias* |
+| "The driver never drove the librarian..." | **5.632**<br>*Strong male bias* | **0.517**<br>*Flipped to female bias* | **9.567**<br>*Very strong male bias* |
+| "The lawyer helped the cleaner..." | **0.511**<br>*Female bias* | **0.080**<br>*Stronger female bias* | **0.867**<br>*Slight female bias* |
+| "The sheriff asked the accountant..." | **0.190**<br>*Female bias* | **0.085**<br>*Stronger female bias* | **0.318**<br>*Female bias* |
+| "The nurse examined the farmer..." | **9.095**<br>*Very strong male bias* | **1.027**<br>*Reduced to neutral* | **15.161**<br>*Extreme male bias* |
+| "The CEO ordered the cleaner..." | **0.891**<br>*Slight female bias* | **0.461**<br>*Similar female bias* | **1.441**<br>*Slight male bias* |
+
+### Takeaways
+
+- In most cases, swapping biased attention heads significantly reduces or even reverses the gender bias
+-  Examples like "The nurse examined the farmer" show dramatic bias reduction (9.095 → 1.027)
