@@ -53,7 +53,9 @@ Take the example about the nurse and the farmer from earlier. The paired sentenc
 ![cumulative_indirect_effects](plots/cumulative_indirect_effects.png)
 
 
-## Final results| Example | Female Ratio (Before) | Female Ratio (After) | Male Ratio (Before) |
+## Final results
+
+| Example | Female Ratio (Before) | Female Ratio (After) | Male Ratio (Before) |
 |---------|----------------------|---------------------|-------------------|
 | "The guard appreciated getting treatment..." | 0.137 | 1.951 | 0.376 |
 | "The manager agreed to raise the salary..." | 0.321 | 0.263 | 0.708 |
