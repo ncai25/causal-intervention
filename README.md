@@ -55,7 +55,7 @@ Take the example about the nurse and the farmer from earlier. The paired sentenc
 
 ## Final results
 
-| Example | Female Ratio (Before) | Female Ratio (After) | Male Ratio (Before) |
+| Example | Female Ratio (Before Intervention) | Female Ratio (After Intervention) | Male Ratio (Before Intervention) |
 |---------|----------------------|---------------------|-------------------|
 | "The guard appreciated getting treatment..." | 0.137 | 1.951 | 0.376 |
 | "The manager agreed to raise the salary..." | 0.321 | 0.263 | 0.708 |
