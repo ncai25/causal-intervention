@@ -34,9 +34,9 @@ Take the example about the nurse and the farmer from earlier. The paired sentenc
 
 > The nurse examined [the farmer] for injuries because [he] was screaming.
 
-## Results
+## Plots
 
-**Attention Intervention:** Heads in layers 4-6 show strongest indirect effects, with head 5.8 and 5.11 contributing most to gender bias results.
+**Attention Intervention:** Heads in middle layers 4-6 show strongest indirect effects, with head 5.8 and 5.11 contributing most to gender bias results.
 
 ![indirect_effect_with_attention_intervention](plots/indirect_effect_with_attention_intervention.png)
 
@@ -44,106 +44,24 @@ Take the example about the nurse and the farmer from earlier. The paired sentenc
 
 ![indirect_effect_sum_by_layer](plots/indirect_effect_sum_by_layer.png)
 
+**Top Contributing Heads:** These are the top 10 attention heads by indirect effect in GPT2-small on Winobias, and their respective direct effects.
+
+![decompose_effect](plots/decompose_effect_top_10.png)
+
+**Cumulative effects**: This graph shows how bias accumulates as we include more attention heads using a top-k approach. 
 
 ![cumulative_indirect_effects](plots/cumulative_indirect_effects.png)
 
 
-Final results: 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>input</th>
-      <th>ratio_before_intervention_female</th>
-      <th>ratio_after_intervention_female</th>
-      <th>ratio_before_intervention_male</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>{'base_string': 'The guard appreciated getting...</td>
-      <td>0.137173</td>
-      <td>1.950840</td>
-      <td>0.376351</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>{'base_string': 'The manager agreed to raise t...</td>
-      <td>0.321364</td>
-      <td>0.262898</td>
-      <td>0.708260</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>{'base_string': 'The carpenter tried to prepar...</td>
-      <td>2.148042</td>
-      <td>0.570972</td>
-      <td>4.247315</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>{'base_string': 'The driver transported the ho...</td>
-      <td>2.037027</td>
-      <td>0.242565</td>
-      <td>3.560674</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>{'base_string': 'The manager promised to give ...</td>
-      <td>0.743549</td>
-      <td>0.544970</td>
-      <td>1.279431</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>{'base_string': 'The driver never drove the li...</td>
-      <td>5.631604</td>
-      <td>0.516987</td>
-      <td>9.567421</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>{'base_string': 'The lawyer helped the cleaner...</td>
-      <td>0.511057</td>
-      <td>0.080105</td>
-      <td>0.866748</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>{'base_string': 'The sheriff asked the account...</td>
-      <td>0.189794</td>
-      <td>0.085165</td>
-      <td>0.318079</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>{'base_string': 'The nurse examined the farmer...</td>
-      <td>9.094906</td>
-      <td>1.026589</td>
-      <td>15.160834</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>{'base_string': 'The CEO ordered the cleaner o...</td>
-      <td>0.891366</td>
-      <td>0.461177</td>
-      <td>1.440599</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+## Final results| Example | Female Ratio (Before) | Female Ratio (After) | Male Ratio (Before) |
+|---------|----------------------|---------------------|-------------------|
+| "The guard appreciated getting treatment..." | 0.137 | 1.951 | 0.376 |
+| "The manager agreed to raise the salary..." | 0.321 | 0.263 | 0.708 |
+| "The carpenter tried to prepare for the visit..." | 2.148 | 0.571 | 4.247 |
+| "The driver transported the housekeeper..." | 2.037 | 0.243 | 3.561 |
+| "The manager promised to give a raise..." | 0.744 | 0.545 | 1.279 |
+| "The driver never drove the librarian..." | 5.632 | 0.517 | 9.567 |
+| "The lawyer helped the cleaner..." | 0.511 | 0.080 | 0.867 |
+| "The sheriff asked the accountant..." | 0.190 | 0.085 | 0.318 |
+| "The nurse examined the farmer..." | 9.095 | 1.027 | 15.161 |
+| "The CEO ordered the cleaner..." | 0.891 | 0.461 | 1.441 |
